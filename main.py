@@ -53,5 +53,10 @@ def find_between(s):
         return s[(start * -1) + 1:-1]
     except ValueError:
         return ""
+    
+@app.route('/')
+def hello_world():
+  return 'Hello, World!'
+  
 if __name__ == '__main__':
   app.run()
