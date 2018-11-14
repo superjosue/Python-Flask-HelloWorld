@@ -57,6 +57,11 @@ def find_between(s):
 @app.route('/')
 def hello_world():
   return 'Hello, World!'
+
+
+@app.route('/user/')
+def message():
+  return 'Insert User Code!'
   
 if __name__ == '__main__':
   app.run()
