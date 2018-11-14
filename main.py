@@ -7,7 +7,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/user/<userID>')
+@app.route('/<userID>')
 def UserData(userID):
     url = 'http://www.imdb.com/user/' + userID + '/ratings'
     response = requests.get(url)
