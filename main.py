@@ -7,8 +7,9 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/<userID>')
-def UserData(userID):
+@app.route('/')
+def UserData():
+    userID=ur26913496
     url = 'http://www.imdb.com/user/' + userID + '/ratings'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -54,9 +55,7 @@ def find_between(s):
     except ValueError:
         return ""
     
-@app.route('/')
-def hello_world():
-  return 'aqui tierra'
+
 
 
 @app.route('/user/')
